@@ -58,6 +58,7 @@ function update(location) {
     text.innerText = location.text;
 }
 
+// location specific logic
 function goTown() {
     update(locations[0]);
 }
