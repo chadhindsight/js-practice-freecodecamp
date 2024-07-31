@@ -129,7 +129,7 @@ function attack() {
     text.innerText = "The " + monsters[fighting].name + " attacks.";
     text.innerText += " You attack it with your " + weapons[currentWeaponIndex].name + ".";
 
-
+    // Add a random number between 1 and the value of xp to monsterHealth
     health -= monsters[fighting].level;
     monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;;
 }
