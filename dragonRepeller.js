@@ -131,7 +131,11 @@ function attack() {
 
     // Add a random number between 1 and the value of xp to monsterHealth
     health -= monsters[fighting].level;
-    monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;;
+    monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
+
+    if (health <= 0) {
+        lose();
+    }
 }
 
 function dodge() {
