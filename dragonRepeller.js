@@ -40,6 +40,12 @@ const locations = [
         "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
         "button functions": [fightSlime, fightBeast, goTown],
         text: "You enter the cave. You see some monsters."
+    },
+    {
+        name: "kill monster",
+        "button text": ["Go to town square", "Go to town square", "Go to town square"],
+        "button functions": [goTown, goTown, goTown],
+        text: "The monster screams Arg! as it dies. You gain experience points and find gold."
     }
 ];
 
@@ -126,9 +132,22 @@ function goFight() {
 }
 
 function attack() {
+    text.innerText = "The " + monsters[fighting].name + " attacks.";
+    text.innerText += " You attack it with your " + weapons[currentWeaponIndex].name + ".";
 
+    // Add a random number between 1 and the value of xp to monsterHealth
+    health -= monsters[fighting].level;
+    monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
+
+    if (health <= 0) {
+        lose();
+    }
+    // check on monster health
+    else if (monsterHealth <= 0) {
+        defeatMonster()
+    }
 }
 
 function dodge() {
-
+    text.innerText = "You dodge the attack from the " + monsters[fighting].name
 }

@@ -22,3 +22,14 @@ for (const row of rows) {
 }
 
 console.log(result);
+
+//  padRow REFACTOR
+// function padRow(rowNumber, rowCount) {
+//     const padLength = rowCount - rowNumber;
+//     const charLength = 2 * rowNumber - 1;
+
+//     const spaces = Array(padLength).fill(" ").map(space => space).join("");
+//     const characters = Array(charLength).fill(character).map(char => char).join("");
+
+//     return spaces + characters + spaces;
+// }
