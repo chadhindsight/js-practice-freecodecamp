@@ -216,6 +216,6 @@ function restart() {
     inventory = ["stick"];
     goldText.innerText = gold;
     healthText.innerText = health;
-    xpText.innerText = xp;
+    xpText.innerHTML = xp;
     goTown();
 }
