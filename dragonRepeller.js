@@ -205,7 +205,7 @@ function defeatMonster() {
 }
 
 function lose() {
-    update(locations[5]);
+    update(locations[6]);
 }
 // restarts the game
 function restart() {
