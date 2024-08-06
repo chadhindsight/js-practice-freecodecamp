@@ -207,7 +207,7 @@ function defeatMonster() {
 function lose() {
     update(locations[5]);
 }
-
+// restarts the game
 function restart() {
     xp = 0;
     health = 100;
