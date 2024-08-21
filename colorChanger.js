@@ -16,7 +16,7 @@ function getRandomIndex() {
     const randomIndex = Math.floor(darkColorsArr.length * Math.random());
     return randomIndex;
 }
-
+// very demure
 const body = document.querySelector("body");
 const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
 
