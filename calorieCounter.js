@@ -21,10 +21,17 @@ function isInvalidInput(str) {
 }
 
 function addEntry() {
-    const targetId = '#' + entryDropdown.value;
-    // Target the .input-container within the element specified by targetId
-    const targetInputContainer = document.querySelector(targetId + ' .input-container');
+    const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    const HTMLString = `
+        <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
+        <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
+        <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
+        <input type="number" id="${entryDropdown.value}-${entryNumber}-calories" placeholder="Calories" min="0" />
+    `;
 
-    // Example usage
-    console.log(targetInputContainer);
+    // Example usage: you might want to add this HTMLString to the DOM
+    console.log(HTMLString);
 }
+
+
