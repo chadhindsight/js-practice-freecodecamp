@@ -15,5 +15,16 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str) {
-    const regex = /e/i;
+    //The + modifier in a regex allows you to match a pattern that occurs one or more times.
+    const regex = /\d+e\d+/i;
+    return str.match(regex)
+}
+
+function addEntry() {
+    const targetId = '#' + entryDropdown.value;
+    // Target the .input-container within the element specified by targetId
+    const targetInputContainer = document.querySelector(targetId + ' .input-container');
+
+    // Example usage
+    console.log(targetInputContainer);
 }
