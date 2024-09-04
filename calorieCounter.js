@@ -30,8 +30,8 @@ function addEntry() {
         <input type="number" id="${entryDropdown.value}-${entryNumber}-calories" placeholder="Calories" min="0" />
     `;
 
-    // Example usage: you might want to add this HTMLString to the DOM
-    console.log(HTMLString);
+    // Append the new HTML content
+    targetInputContainer.innerHTML += HTMLString;
 }
 
 
