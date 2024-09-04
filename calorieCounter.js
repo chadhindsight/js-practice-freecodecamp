@@ -32,6 +32,8 @@ function addEntry() {
 
     // Append the new HTML content
     targetInputContainer.innerHTML += HTMLString;
+
+    addEntryButton.addEventListener("click", addEntry)
 }
 
 
