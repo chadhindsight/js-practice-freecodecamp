@@ -62,8 +62,8 @@ function calculateCalories(e) {
   <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
   <hr>
   <p>${budgetCalories} Calories Budgeted</p>
-
-  `;
+    `;
+    output.classList.remove("hide")
 }
 
 function getCaloriesFromInputs(list) {
