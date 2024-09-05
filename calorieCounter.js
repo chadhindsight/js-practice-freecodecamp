@@ -31,7 +31,7 @@ function addEntry() {
     `;
 
     targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
-    addEntryButton.addEventListener("click", addEntry)
+    addEntryButton.addEventListener("click", addEntry);
 }
 
 function calculateCalories(e) {
@@ -66,6 +66,7 @@ function calculateCalories(e) {
     output.classList.remove("hide")
 }
 
+
 function getCaloriesFromInputs(list) {
     let calories = 0;
 
@@ -83,3 +84,14 @@ function getCaloriesFromInputs(list) {
     return calories;
 }
 
+function clearForm() {
+    const inputContainers = Array.from(document.querySelectorAll('.input-container'));
+
+    //  clear all inputs
+    for (const container of inputContainers) {
+        container.innerHTML = '';
+    }
+
+    budgetNumberInput.value = '';
+    output.innerText = '';
+}
