@@ -86,16 +86,4 @@ let userData = {
     songCurrentTime: 0,
 };
 
-const printGreeting = () => {
-    console.log('Hello there!');
-}
 
-printGreeting();
-
-const printMessage = org => {
-    console.log(`${org} is awesome!`);
-}
-
-printMessage('freeCodeCamp');
-
-const addTwoNumbers = (num1, num2) => num1 + num2
