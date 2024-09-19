@@ -179,6 +179,9 @@ const renderSongs = (array) => {
     playlistSongs.innerHTML = songsHTML;
 };
 
+const shuffle = () => {
+    userData?.songs.sort(() => Math.random() - 0.5)
+};
 const setPlayButtonAccessibleText = () => {
     const song = userData?.currentSong || userData?.songs[0];
 
