@@ -182,6 +182,7 @@ const renderSongs = (array) => {
 const shuffle = () => {
     userData?.songs.sort(() => Math.random() - 0.5)
 };
+shuffleButton.addEventListener("click", shuffle);
 const setPlayButtonAccessibleText = () => {
     const song = userData?.currentSong || userData?.songs[0];
 
