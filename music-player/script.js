@@ -178,7 +178,7 @@ const renderSongs = (array) => {
 
     playlistSongs.innerHTML = songsHTML;
 };
-
+const deleteSong = (id) => { }
 const shuffle = () => {
     userData?.songs.sort(() => Math.random() - 0.5)
 };
