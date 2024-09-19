@@ -103,6 +103,7 @@ const playSong = (id) => {
     setPlayerDisplay();
 
     audio.play();
+    setPlayButtonAccessibleText()
 };
 
 const pauseSong = () => {
