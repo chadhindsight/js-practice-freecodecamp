@@ -11,6 +11,7 @@ const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
+// Handle different cases for date options 
 switch (dateOptionsSelectElement.value) {
     case "yyyy-mm-dd":
         currentDateParagraph.textContent = formattedDate
