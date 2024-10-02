@@ -197,9 +197,10 @@ const setPlayerCards = (arr = players) => {
 };
 
 playersDropdownList.addEventListener("change", (e) => {
-
-
-    console.log(e.target.value);
+    switch (e.target.value) {
+        case "nickname":
+            setPlayerCards(players.filter(player => player.nickname !== null))
+    }
 
 })
 
