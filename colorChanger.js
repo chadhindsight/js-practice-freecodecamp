@@ -11,7 +11,6 @@ const darkColorsArr = [
     "#2C3E50",
     "#800022",
 ];
-// tings
 
 function getRandomIndex() {
     const randomIndex = Math.floor(darkColorsArr.length * Math.random());
