@@ -40,5 +40,4 @@ taskForm.addEventListener("submit", (e) => {
         description: descriptionInput.value,
 
     };
-    console.log(taskObj);
 });
