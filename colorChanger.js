@@ -1,4 +1,4 @@
-// array of color values
+// array of the various color values
 const darkColorsArr = [
     "#2C3E50",
     "#34495E",
