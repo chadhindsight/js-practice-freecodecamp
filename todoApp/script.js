@@ -38,6 +38,9 @@ taskForm.addEventListener("submit", (e) => {
         title: titleInput.value,
         date: dateInput.value,
         description: descriptionInput.value,
-
     };
+
+    if (dataArrIndex === -1) {
+        taskData.unshift(taskObj);
+    }
 });
