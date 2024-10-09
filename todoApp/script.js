@@ -14,11 +14,11 @@ const taskData = [];
 let currentTask = {};
 
 const reset = () => {
-    titleInput.value = ""
-    descriptionInput.value = ""
-    dateInput.value = ""
-    currentTask = {}
+    titleInput.value = "";
+    dateInput.value = "";
+    descriptionInput.value = "";
     taskForm.classList.toggle("hidden");
+    currentTask = {};
 }
 
 openTaskFormBtn.addEventListener("click", () =>
@@ -33,7 +33,7 @@ cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
 
 discardBtn.addEventListener("click", () => {
     confirmCloseDialog.close();
-    taskForm.classList.toggle("hidden");
+    reset();
 });
 
 
@@ -66,5 +66,5 @@ taskForm.addEventListener("submit", (e) => {
         }
     );
 
-    taskForm.classList.toggle("hidden");
+    reset()
 });
