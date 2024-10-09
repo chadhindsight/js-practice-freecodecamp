@@ -13,7 +13,13 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
-
+const reset = () => {
+    titleInput.value = ""
+    descriptionInput.value = ""
+    dateInput.value = ""
+    currentTask = {}
+    taskForm.classList.toggle("hidden");
+}
 
 openTaskFormBtn.addEventListener("click", () =>
     taskForm.classList.toggle("hidden")
@@ -46,8 +52,9 @@ taskForm.addEventListener("submit", (e) => {
         taskData.unshift(taskObj);
     }
 
-    taskData.forEach(({ id, title, date, description }) => {
-        tasksContainer.innerHTML += `
+    taskData.forEach(
+        ({ id, title, date, description }) => {
+            tasksContainer.innerHTML += `
         <div class="task" id="${id}">
           <p><strong>Title:</strong> ${title}</p>
           <p><strong>Date:</strong> ${date}</p>
@@ -56,7 +63,7 @@ taskForm.addEventListener("submit", (e) => {
           <button type="button" class="btn">Delete</button>
         </div>
       `
-    }
+        }
     );
 
     taskForm.classList.toggle("hidden");
