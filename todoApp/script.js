@@ -26,7 +26,7 @@ const addOrUpdateTask = () => {
         taskData.unshift(taskObj);
     }
 };
-
+// dynamically create a div
 const updateTaskContainer = () => {
     taskData.forEach(
         ({ id, title, date, description }) => {
