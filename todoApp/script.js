@@ -25,9 +25,13 @@ const addOrUpdateTask = () => {
     if (dataArrIndex === -1) {
         taskData.unshift(taskObj);
     }
+
+    updateTaskContainer()
+    reset()
 };
-// dynamically create a div
+
 const updateTaskContainer = () => {
+    tasksContainer.innerHTML = "";
     taskData.forEach(
         ({ id, title, date, description }) => {
             tasksContainer.innerHTML += `
@@ -36,12 +40,12 @@ const updateTaskContainer = () => {
           <p><strong>Date:</strong> ${date}</p>
           <p><strong>Description:</strong> ${description}</p>
           <button type="button" class="btn">Edit</button>
-          <button type="button" class="btn">Delete</button>
+          <button type="button" class="btn">Delete</button> 
         </div>
       `
         }
     );
-}
+};
 
 const reset = () => {
     titleInput.value = "";
@@ -74,7 +78,5 @@ discardBtn.addEventListener("click", () => {
 taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-
-
-    reset()
+    addOrUpdateTask();
 });
