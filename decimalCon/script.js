@@ -3,30 +3,13 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-    const inputs = [];
-    const quotients = [];
-    const remainders = [];
-
-    if (input === 0) {
-        result.innerText = "0";
-        return
-    }
+    let binary = "";
 
     while (input > 0) {
-        const quotient = Math.floor(input / 2);
-        const remainder = input % 2;
-
-        inputs.push(input);
-        quotients.push(quotient);
-        remainders.push(remainder);
-        input = quotient;
+        input = Math.floor(input / 2);
     }
 
-    console.log("Inputs: ", inputs);
-    console.log("Quotients: ", quotients);
-    console.log("Remainders: ", remainders);
-
-    result.innerText = remainders.reverse().join("");
+    result.innerText = binary;
 };
 
 const checkUserInput = () => {
@@ -50,7 +33,6 @@ numberInput.addEventListener("keydown", (e) => {
         checkUserInput();
     }
 });
-
 
 // Binary numbers are a base-2 number system. Unlike the base-10 or decimal number system we use every day that uses 10 digits (0-9) to form numbers, the binary number system only has two digits, 0 and 1. In computer science, these binary digits are called bits, and are the smallest unit of data computers can process. For computers, 0 represents false or "off", and 1 represents true or "on".
 
