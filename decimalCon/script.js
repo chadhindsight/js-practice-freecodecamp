@@ -11,7 +11,7 @@ const decimalToBinary = (input) => {
 
     result.innerText = binary;
 };
-
+// web dev is kinda trash tbh
 const checkUserInput = () => {
     if (
         !numberInput.value ||
