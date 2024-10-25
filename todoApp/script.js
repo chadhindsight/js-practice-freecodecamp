@@ -14,6 +14,10 @@ const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 
 const addOrUpdateTask = () => {
+    if (!titleInput.value.trim()) {
+        alert("Please provide a title");
+        return
+    }
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
     const taskObj = {
         id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
@@ -38,7 +42,7 @@ const updateTaskContainer = () => {
 
     taskData.forEach(
         ({ id, title, date, description }) => {
-            tasksContainer.innerHTML += `
+            (tasksContainer.innerHTML += `
         <div class="task" id="${id}">
           <p><strong>Title:</strong> ${title}</p>
           <p><strong>Date:</strong> ${date}</p>
@@ -46,7 +50,7 @@ const updateTaskContainer = () => {
           <button onclick="editTask(this)" type="button" class="btn">Edit</button>
           <button onclick="deleteTask(this)" type="button" class="btn">Delete</button> 
         </div>
-      `
+      `)
         }
     );
 };
@@ -79,7 +83,7 @@ const editTask = (buttonEl) => {
 }
 
 const reset = () => {
-    addOrUpdateTaskBtn.innerText = "Add Task"
+    addOrUpdateTaskBtn.innerText = "Add Task";
     titleInput.value = "";
     dateInput.value = "";
     descriptionInput.value = "";
