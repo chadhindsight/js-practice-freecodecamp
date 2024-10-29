@@ -11,27 +11,29 @@ const decimalToBinary = (input) => {
 };
 
 const showAnimation = () => {
-
+    setTimeout(() => {
+        console.log("free");
+    }, 500);
+    setTimeout(() => {
+        console.log("Code");
+    }, 1000);
+    console.log("Camp");
 };
 
 const checkUserInput = () => {
-    const inputInt = parseInt(numberInput.value)
+    const inputInt = parseInt(numberInput.value);
 
-    if (
-        !numberInput.value ||
-        isNaN(parseInt(numberInput.value)) ||
-        parseInt(numberInput.value) < 0
-    ) {
+    if (!numberInput.value || isNaN(inputInt) || inputInt < 0) {
         alert("Please provide a decimal number greater than or equal to 0");
         return;
     }
 
-    if (parseInt(numberInput.value) === 5) {
+    if (inputInt === 5) {
         showAnimation();
         return;
     }
 
-    result.textContent = decimalToBinary(parseInt(numberInput.value));
+    result.textContent = decimalToBinary(inputInt);
     numberInput.value = "";
 };
 
