@@ -58,7 +58,7 @@ const checkUserInput = () => {
   result.textContent = decimalToBinary(inputInt);
   numberInput.value = "";
 };
-
+// end it allß
 convertBtn.addEventListener("click", checkUserInput);
 
 numberInput.addEventListener("keydown", (e) => {
