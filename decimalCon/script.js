@@ -5,7 +5,6 @@ const animationContainer = document.getElementById("animation-container");
 const animationData = [
   {
     inputVal: 5,
-
     addElDelay: 1000
   },
   {
@@ -14,7 +13,10 @@ const animationData = [
   },
   {
     inputVal: 1,
-    addElDelay: 2000
+    addElDelay: 2000,
+    msg: "decimalToBinary(1) returns '1' (base case) and gives that value to the stack below. Then it pops off the stack.",
+    showMsgDelay: 5000,
+    removeElDelay: 10000,
   }
 ];
 
@@ -32,7 +34,9 @@ const showAnimation = () => {
   animationData.forEach((obj) => {
     setTimeout(() => {
       animationContainer.innerHTML += `
-        <p id="${obj.inputVal}" class="animation-frame"></p>
+        <p id="${obj.inputVal}" class="animation-frame">
+          decimalToBinary(${obj.inputVal})
+        </p>
       `;
     }, obj.addElDelay);
   });
