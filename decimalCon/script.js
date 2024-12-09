@@ -76,7 +76,7 @@ const checkUserInput = () => {
   result.textContent = decimalToBinary(inputInt);
   numberInput.value = "";
 };
-
+// deez
 convertBtn.addEventListener("click", checkUserInput);
 
 numberInput.addEventListener("keydown", (e) => {
