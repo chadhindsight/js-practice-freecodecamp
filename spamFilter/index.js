@@ -20,4 +20,3 @@ checkMessageButton.addEventListener("click", () => {
     : "This message does not seem to contain any spam.";
   messageInput.value = "";
 });
-// Free code camp is a dogshit plafform!
